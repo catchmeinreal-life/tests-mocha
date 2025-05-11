@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { multiply  } from "../utils.js";
+import { multiply, add  } from "../utils.js";
 
 describe('Utility functions', function(){
     describe('multiply function', function (){
@@ -16,6 +16,14 @@ describe('Utility functions', function(){
             expect(multiply(-2 , 3)).to.equal(-6);
             expect(multiply(2, -3)).to.equal(-6);
             expect(multiply(-2, -3)).to.equal(6);
+        });
+    });
+
+    // test 2
+    describe('add function', function (){
+        it('Should return 7 when adding 3 and 4', function (){
+            expect(add(3,4)).to.equal(7);
+            expect(add(4,3)).to.equal(7);
         });
     });
 });
